@@ -1,24 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oBU-kX-GRX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Who Wants To Win Fake Money?-->
+        <scene sceneID="Rda-9u-rlt">
+            <objects>
+                <viewController id="D5d-3h-vuE" customClass="difficultyPage" customModule="Trivia_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RJE-pJ-oae">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7m-Sp-IEL">
+                                <rect key="frame" x="20" y="84" width="335" height="81.5"/>
+                                <string key="text">Welcome to 'Who Wants To Win Fake Money?' where the questions don't matter and the money isn't real. Please pick a difficulty to play on.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7B-9H-ygx">
+                                <rect key="frame" x="20" y="268.5" width="335" height="30"/>
+                                <state key="normal" title="Easy"/>
+                                <connections>
+                                    <action selector="difficultyButtonPressed:" destination="D5d-3h-vuE" eventType="touchUpInside" id="nZ8-gf-Ta8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdx-Pe-pLU">
+                                <rect key="frame" x="20" y="318.5" width="335" height="30"/>
+                                <state key="normal" title="Medium"/>
+                                <connections>
+                                    <action selector="difficultyButtonPressed:" destination="D5d-3h-vuE" eventType="touchUpInside" id="CDe-Ie-Xag"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muG-8M-P6p">
+                                <rect key="frame" x="20" y="368.5" width="335" height="30"/>
+                                <state key="normal" title="Hard"/>
+                                <connections>
+                                    <action selector="difficultyButtonPressed:" destination="D5d-3h-vuE" eventType="touchUpInside" id="3o7-Fe-Ag4"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="RegisPhilman.png" translatesAutoresizingMaskIntoConstraints="NO" id="K2f-2W-fKd">
+                                <rect key="frame" x="82" y="413.5" width="210" height="289.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bp3-xn-he2" firstAttribute="trailing" secondItem="muG-8M-P6p" secondAttribute="trailing" constant="20" id="4j1-Gh-Wat"/>
+                            <constraint firstItem="j7m-Sp-IEL" firstAttribute="leading" secondItem="bp3-xn-he2" secondAttribute="leading" constant="20" id="4v8-o2-UbE"/>
+                            <constraint firstItem="muG-8M-P6p" firstAttribute="leading" secondItem="bp3-xn-he2" secondAttribute="leading" constant="20" id="70e-v6-ZSg"/>
+                            <constraint firstItem="Vdx-Pe-pLU" firstAttribute="top" secondItem="k7B-9H-ygx" secondAttribute="bottom" constant="20" id="8HU-Ep-vph"/>
+                            <constraint firstItem="bp3-xn-he2" firstAttribute="trailing" secondItem="k7B-9H-ygx" secondAttribute="trailing" constant="20" id="8lj-1V-abF"/>
+                            <constraint firstItem="k7B-9H-ygx" firstAttribute="centerX" secondItem="j7m-Sp-IEL" secondAttribute="centerX" id="9w7-j4-m5g"/>
+                            <constraint firstItem="muG-8M-P6p" firstAttribute="top" secondItem="Vdx-Pe-pLU" secondAttribute="bottom" constant="20" id="C4m-Dr-cqK"/>
+                            <constraint firstItem="k7B-9H-ygx" firstAttribute="top" secondItem="j7m-Sp-IEL" secondAttribute="bottom" constant="103" id="J4Z-TN-LTm"/>
+                            <constraint firstItem="Vdx-Pe-pLU" firstAttribute="top" secondItem="k7B-9H-ygx" secondAttribute="bottom" constant="20" id="Kec-L6-AjQ"/>
+                            <constraint firstItem="Vdx-Pe-pLU" firstAttribute="leading" secondItem="bp3-xn-he2" secondAttribute="leading" constant="20" id="LNh-3f-gc2"/>
+                            <constraint firstItem="k7B-9H-ygx" firstAttribute="leading" secondItem="bp3-xn-he2" secondAttribute="leading" constant="20" id="M7U-Gs-xTw"/>
+                            <constraint firstItem="Vdx-Pe-pLU" firstAttribute="centerY" secondItem="RJE-pJ-oae" secondAttribute="centerY" id="PvL-A3-s7O"/>
+                            <constraint firstItem="K2f-2W-fKd" firstAttribute="bottom" secondItem="bp3-xn-he2" secondAttribute="bottom" constant="36" id="QD1-d4-Eoc"/>
+                            <constraint firstItem="muG-8M-P6p" firstAttribute="top" secondItem="Vdx-Pe-pLU" secondAttribute="bottom" constant="20" id="XaR-bq-I0c"/>
+                            <constraint firstItem="bp3-xn-he2" firstAttribute="trailing" secondItem="Vdx-Pe-pLU" secondAttribute="trailing" constant="20" id="YXP-5X-u3G"/>
+                            <constraint firstItem="bp3-xn-he2" firstAttribute="trailing" secondItem="j7m-Sp-IEL" secondAttribute="trailing" constant="20" id="cTL-ts-NKG"/>
+                            <constraint firstItem="K2f-2W-fKd" firstAttribute="leading" secondItem="bp3-xn-he2" secondAttribute="leading" constant="82" id="dLi-vd-ERc"/>
+                            <constraint firstItem="K2f-2W-fKd" firstAttribute="top" secondItem="muG-8M-P6p" secondAttribute="bottom" constant="15" id="pXR-MM-s8e"/>
+                            <constraint firstItem="K2f-2W-fKd" firstAttribute="centerX" secondItem="muG-8M-P6p" secondAttribute="centerX" constant="-0.5" id="qsc-dQ-KTx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bp3-xn-he2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Who Wants To Win Fake Money?" id="w3A-62-hiH"/>
+                    <connections>
+                        <outlet property="regisPhilman" destination="K2f-2W-fKd" id="A9f-kq-7uZ"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showMainScreen" id="yCr-dU-qag"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7e0-YP-OJo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1848.8" y="133.5832083958021"/>
+        </scene>
+        <!--Who wants to win fake money?-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Trivia_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cor-3U-hqz">
+                                <rect key="frame" x="20" y="134" width="335" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaI-6s-7A3">
+                                <rect key="frame" x="20" y="467" width="335" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Answer 1"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u88-5q-alk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgD-Ns-NrL">
+                                <rect key="frame" x="20" y="517" width="335" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Answer 2"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DOj-3z-qsM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQs-UP-GEc">
+                                <rect key="frame" x="20" y="617" width="335" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Answer 4"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gnh-Mg-zpx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuY-vO-Hbg">
+                                <rect key="frame" x="20" y="567" width="335" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Answer 3"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P51-Dg-5fu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wallet: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbv-Jg-n8x">
+                                <rect key="frame" x="16" y="86" width="56.5" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYc-Hk-Usk">
+                                <rect key="frame" x="80" y="86" width="11" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Who wants to win fake money?" id="iK9-kJ-axc"/>
+                    <connections>
+                        <outlet property="actualScore" destination="VYc-Hk-Usk" id="BBR-OV-aqe"/>
+                        <outlet property="answerFour" destination="fQs-UP-GEc" id="t4z-Hd-46A"/>
+                        <outlet property="answerOne" destination="EaI-6s-7A3" id="8m7-rW-CBa"/>
+                        <outlet property="answerThree" destination="VuY-vO-Hbg" id="GDM-sM-uxI"/>
+                        <outlet property="answerTwo" destination="AgD-Ns-NrL" id="QMS-0g-z5C"/>
+                        <outlet property="question" destination="cor-3U-hqz" id="nsV-Hi-oX9"/>
+                        <outlet property="scoreLabel" destination="rbv-Jg-n8x" id="7fR-R2-BO3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2705" y="134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iyg-a1-a82">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oBU-kX-GRX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pah-He-6rk">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="D5d-3h-vuE" kind="relationship" relationship="rootViewController" id="vpk-y8-8p2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="quz-mJ-fkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="RegisPhilman.png" width="1040" height="1390"/>
+    </resources>
 </document>

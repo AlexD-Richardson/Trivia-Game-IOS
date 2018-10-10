@@ -13,6 +13,9 @@
 		9E3E4BA9216CE49E0091F00F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E3E4BA8216CE49E0091F00F /* Assets.xcassets */; };
 		9E3E4BAC216CE49E0091F00F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E3E4BAA216CE49E0091F00F /* LaunchScreen.storyboard */; };
 		9E992C0E216CE9FA0053279A /* TriviaQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E992C0D216CE9FA0053279A /* TriviaQuestion.swift */; };
+		9E992C2E216E3C4A0053279A /* difficultyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E992C2D216E3C4A0053279A /* difficultyPage.swift */; };
+		9E992C30216E48CE0053279A /* RegisPhilman.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E992C2F216E48CD0053279A /* RegisPhilman.png */; };
+		9E992C34216E56410053279A /* QuestionArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E992C33216E56410053279A /* QuestionArrays.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		9E3E4BAB216CE49E0091F00F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E3E4BAD216CE49E0091F00F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E992C0D216CE9FA0053279A /* TriviaQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaQuestion.swift; sourceTree = "<group>"; };
+		9E992C2D216E3C4A0053279A /* difficultyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = difficultyPage.swift; sourceTree = "<group>"; };
+		9E992C2F216E48CD0053279A /* RegisPhilman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RegisPhilman.png; path = "../../../../../Downloads/Gifs and Pics to use/RegisPhilman.png"; sourceTree = "<group>"; };
+		9E992C33216E56410053279A /* QuestionArrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionArrays.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +66,12 @@
 				9E3E4BA3216CE49B0091F00F /* ViewController.swift */,
 				9E3E4BA5216CE49B0091F00F /* Main.storyboard */,
 				9E3E4BA8216CE49E0091F00F /* Assets.xcassets */,
+				9E992C2F216E48CD0053279A /* RegisPhilman.png */,
 				9E3E4BAA216CE49E0091F00F /* LaunchScreen.storyboard */,
 				9E3E4BAD216CE49E0091F00F /* Info.plist */,
 				9E992C0D216CE9FA0053279A /* TriviaQuestion.swift */,
+				9E992C2D216E3C4A0053279A /* difficultyPage.swift */,
+				9E992C33216E56410053279A /* QuestionArrays.swift */,
 			);
 			path = "Trivia Game";
 			sourceTree = "<group>";
@@ -127,6 +136,7 @@
 			files = (
 				9E3E4BAC216CE49E0091F00F /* LaunchScreen.storyboard in Resources */,
 				9E3E4BA9216CE49E0091F00F /* Assets.xcassets in Resources */,
+				9E992C30216E48CE0053279A /* RegisPhilman.png in Resources */,
 				9E3E4BA7216CE49B0091F00F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +151,8 @@
 				9E3E4BA4216CE49B0091F00F /* ViewController.swift in Sources */,
 				9E992C0E216CE9FA0053279A /* TriviaQuestion.swift in Sources */,
 				9E3E4BA2216CE49B0091F00F /* AppDelegate.swift in Sources */,
+				9E992C34216E56410053279A /* QuestionArrays.swift in Sources */,
+				9E992C2E216E3C4A0053279A /* difficultyPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
