@@ -12,6 +12,16 @@ class difficultyPage: UIViewController {
 
     @IBOutlet weak var regisPhilman: UIImageView!
     
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
+    @IBOutlet weak var easyButton: UIButton!
+    
+    @IBOutlet weak var mediumButton: UIButton!
+    
+    @IBOutlet weak var hardButton: UIButton!
+    
+    
+    
     var difficultyLevel: Int!
     
     override func viewDidLoad() {
@@ -20,28 +30,20 @@ class difficultyPage: UIViewController {
         
         
     }
-    
-    func prepare(for segue: UIStoryboardSegue) {
-        
-        
-        if let destination = segue.destination as? ViewController {
-            
-            destination.arrayChooser = difficultyLevel
-            
-        }
 
-    }
     
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let destination = segue.destination as? ViewController {
+            destination.arrayChooser = difficultyLevel
+        }
     }
-    */
 
     @IBAction func difficultyButtonPressed(_ sender: UIButton) {
         difficultyLevel = sender.tag

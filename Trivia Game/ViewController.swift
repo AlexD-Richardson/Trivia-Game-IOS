@@ -24,14 +24,16 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var answerFour: UIButton!
     
-    
-    
     var arrayChooser: Int!
     
     var score = 0 {
+        
         didSet {
+            
             actualScore.text = "$\(score)"
+            
         }
+        
     }
     
     var randomIndex : Int!
@@ -58,7 +60,6 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
         if arrayChooser == 0 {
             
             questions.append(contentsOf: easyQuestions)
@@ -72,7 +73,6 @@ class ViewController: UIViewController {
             questions.append(contentsOf: hardQuestions)
             
         }
-        // Do any additional setup after loading the view, typically from a nib.
         getNewQuestions()
     }
     
@@ -128,7 +128,8 @@ class ViewController: UIViewController {
     
     // show an alert when the user gets the question wrong
     func showIncorrectAnswerAlert(){
-        let incorrectAlert = UIAlertController(title: "Incorrect", message: "\(currentQuestion.correctAnswer) was the incorrect answer", preferredStyle: .actionSheet)
+        
+        let incorrectAlert = UIAlertController(title: "Incorrect", message: "That was the incorrect answer", preferredStyle: .actionSheet)
         
         
         // UIAlertAction
