@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E0267DF216FC4020068F084 /* AddQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0267DE216FC4020068F084 /* AddQuestionViewController.swift */; };
 		9E3E4BA2216CE49B0091F00F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3E4BA1216CE49B0091F00F /* AppDelegate.swift */; };
 		9E3E4BA4216CE49B0091F00F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3E4BA3216CE49B0091F00F /* ViewController.swift */; };
 		9E3E4BA7216CE49B0091F00F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E3E4BA5216CE49B0091F00F /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E0267DE216FC4020068F084 /* AddQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionViewController.swift; sourceTree = "<group>"; };
 		9E3E4B9E216CE49B0091F00F /* Trivia Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trivia Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E3E4BA1216CE49B0091F00F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E3E4BA3216CE49B0091F00F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				9E992C0D216CE9FA0053279A /* TriviaQuestion.swift */,
 				9E992C2D216E3C4A0053279A /* difficultyPage.swift */,
 				9E992C33216E56410053279A /* QuestionArrays.swift */,
+				9E0267DE216FC4020068F084 /* AddQuestionViewController.swift */,
 			);
 			path = "Trivia Game";
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			files = (
 				9E3E4BA4216CE49B0091F00F /* ViewController.swift in Sources */,
 				9E992C0E216CE9FA0053279A /* TriviaQuestion.swift in Sources */,
+				9E0267DF216FC4020068F084 /* AddQuestionViewController.swift in Sources */,
 				9E3E4BA2216CE49B0091F00F /* AppDelegate.swift in Sources */,
 				9E992C34216E56410053279A /* QuestionArrays.swift in Sources */,
 				9E992C2E216E3C4A0053279A /* difficultyPage.swift in Sources */,
