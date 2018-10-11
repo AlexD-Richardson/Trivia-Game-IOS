@@ -94,16 +94,29 @@ class ViewController: UIViewController {
         
     }
     
+    func showGameOverAlert() {
+        
+        let gameOverAlert = UIAlertController(title: "Results", message: "Game Over! You were \(questions.count) questions away from being a Fake Millionaire!", preferredStyle: .actionSheet)
+        
+        let resetAction = UIAlertAction(title: "Reset", style: .default) { _ in self.resetGame()
+            
+        }
+        
+        gameOverAlert.addAction(resetAction)
+        
+        self.present(gameOverAlert, animated: true, completion: nil)
+    }
+    
     func getNewQuestions() {
         
         if questions.count > 0 {
-        
-        randomIndex = Int(arc4random_uniform(UInt32(questions.count)))
-        
-        currentQuestion = questions[randomIndex]
+            
+            randomIndex = Int(arc4random_uniform(UInt32(questions.count)))
+            
+            currentQuestion = questions[randomIndex]
         } else {
             
-            resetGame()
+            showGameOverAlert()
             
         }
     }
@@ -125,36 +138,18 @@ class ViewController: UIViewController {
         // present the alert controller
         self.present(correctAlert,animated: true, completion: nil)
     }
-    
-    // show an alert when the user gets the question wrong
-    func showIncorrectAnswerAlert(){
-        
-        let incorrectAlert = UIAlertController(title: "Incorrect", message: "That was the incorrect answer", preferredStyle: .actionSheet)
-        
-        
-        // UIAlertAction
-        let closeAction = UIAlertAction(title:"close", style: .default) { _ in
-            self.questionsPlaceholder.append(self.questions.remove(at: self.randomIndex))
-            self.getNewQuestions()
-        }
-        
-        
-        // Add the action to the alert controller
-        incorrectAlert.addAction(closeAction)
-        // present the alert controller
-        self.present(incorrectAlert,animated: true, completion: nil)
-    }
-    
-    
-    
+
     @IBAction func buttonTapped(_ sender: UIButton) {
         if sender.tag == currentQuestion.correctAnswerIndex {
             // they got the question right, so we need to let them know
             showCorrectAnswerAlert()
             score += 250000
+        
         } else {
             // they got the question wrong, so we need to let them know
-            showIncorrectAnswerAlert()
+            
+            showGameOverAlert()
+            
             
         }
     }
