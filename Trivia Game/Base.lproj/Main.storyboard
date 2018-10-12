@@ -175,6 +175,22 @@
                                     <segment title="4"/>
                                 </segments>
                             </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SiS-4t-unX">
+                                <rect key="frame" x="21" y="583" width="333" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Easy"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Hard"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljl-jf-aV7">
+                                <rect key="frame" x="17" y="554" width="119" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fxm-FO-bwV"/>
@@ -182,7 +198,7 @@
                     <navigationItem key="navigationItem" title="Add New Question" id="psk-Id-aYe">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="ay7-ag-cCU">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ene-cN-zaz">
-                                <rect key="frame" x="163" y="551" width="49" height="30"/>
+                                <rect key="frame" x="310" y="7" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
@@ -197,10 +213,13 @@
                         <outlet property="answer3" destination="4eO-L5-ikj" id="QLY-an-dpg"/>
                         <outlet property="answer4" destination="AaZ-4L-Srr" id="uin-zK-Er9"/>
                         <outlet property="correctAnswerSet" destination="TKf-oY-wxn" id="vPv-TA-HDf"/>
+                        <outlet property="difficultySet" destination="SiS-4t-unX" id="UJY-E7-Ksx"/>
                         <outlet property="questionText" destination="uJc-jr-aaJ" id="OYc-xo-XKu"/>
+                        <segue destination="2bU-dN-gCK" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHomeWithSegue:" id="8zl-VP-0mT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ve4-71-Yji" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2bU-dN-gCK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2788" y="856.82158920539734"/>
         </scene>

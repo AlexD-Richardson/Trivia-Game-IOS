@@ -114,10 +114,13 @@ class ViewController: UIViewController {
             randomIndex = Int(arc4random_uniform(UInt32(questions.count)))
             
             currentQuestion = questions[randomIndex]
+        } else if questions.count == 0 {
+            
+            showWinnerAlert()
+            
         } else {
             
             showGameOverAlert()
-            
         }
     }
     
@@ -138,6 +141,20 @@ class ViewController: UIViewController {
         // present the alert controller
         self.present(correctAlert,animated: true, completion: nil)
     }
+    
+    func showWinnerAlert() {
+        
+        let winnerAlert = UIAlertController(title: "WINNER!", message: "You are a Millonaire!!!", preferredStyle: .alert)
+        
+        let resetAction = UIAlertAction(title: "Reset", style: .default) { _ in self.resetGame()
+            
+        }
+        
+        winnerAlert.addAction(resetAction)
+        
+        self.present(winnerAlert, animated: true, completion: nil)
+        
+    }
 
     @IBAction func buttonTapped(_ sender: UIButton) {
         if sender.tag == currentQuestion.correctAnswerIndex {
@@ -153,4 +170,6 @@ class ViewController: UIViewController {
             
         }
     }
+    
+    
 }

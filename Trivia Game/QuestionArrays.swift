@@ -8,7 +8,7 @@
 
 import Foundation
 
-let easyQuestions = [TriviaQuestion(question: "What fictional city is the home of Batman?", answers: ["Metropolis", "Central City", "Gotham",           "Atlantis"], correctAnswerIndex: 2),
+var easyQuestions = [TriviaQuestion(question: "What fictional city is the home of Batman?", answers: ["Metropolis", "Central City", "Gotham",           "Atlantis"], correctAnswerIndex: 2),
     
                      TriviaQuestion(question: "Babe Ruth is associated with what sport?", answers: ["Football", "Soccer", "Basketball", "Baseball"], correctAnswerIndex: 3),
                      
@@ -17,7 +17,7 @@ let easyQuestions = [TriviaQuestion(question: "What fictional city is the home o
                      TriviaQuestion(question: "What planet is closest to earth?", answers: ["Venus", "Pluto", "Jupiter", "Mars"], correctAnswerIndex: 0)]
 
 
-let mediumQuestions = [TriviaQuestion(question: "What is the longest bone in your body?", answers: ["Tibia", "Femur", "Humerus", "Cranium"], correctAnswerIndex: 1),
+var mediumQuestions = [TriviaQuestion(question: "What is the longest bone in your body?", answers: ["Tibia", "Femur", "Humerus", "Cranium"], correctAnswerIndex: 1),
                        
                        TriviaQuestion(question: "What president is on the $50 bill?", answers: ["Ulysses S. Grant", "Andrew Jackson", "Dwight D. Eisenhower", "Ronald Reagan"], correctAnswerIndex: 0),
                        
@@ -26,7 +26,7 @@ let mediumQuestions = [TriviaQuestion(question: "What is the longest bone in you
                        TriviaQuestion(question: "What is the only man made object that is observable from the moon?", answers: ["Eiffel Tower", "The Great Wall of China", "Burj Khalifa Building", "Shanghai Tower"], correctAnswerIndex: 1)]
 
 
-let hardQuestions = [TriviaQuestion(question: "Which space craft set off for Jupiter in 1972?", answers: ["Voyager 1", "Mariner 4", "Viking 1", "Pioneer 10"], correctAnswerIndex: 3),
+var hardQuestions = [TriviaQuestion(question: "Which space craft set off for Jupiter in 1972?", answers: ["Voyager 1", "Mariner 4", "Viking 1", "Pioneer 10"], correctAnswerIndex: 3),
                     
                     TriviaQuestion(question: "What is the legislature of the Netherlands called?", answers: ["General Council", "National Assembly", "The States General", "Federal Parliament "], correctAnswerIndex: 2),
                     
