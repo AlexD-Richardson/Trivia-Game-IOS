@@ -277,6 +277,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="makeItRain.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Hzo-7K-Qft">
+                                <rect key="frame" x="16" y="192" width="343" height="267"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -312,6 +316,7 @@
                         <outlet property="answerOne" destination="EaI-6s-7A3" id="8m7-rW-CBa"/>
                         <outlet property="answerThree" destination="VuY-vO-Hbg" id="GDM-sM-uxI"/>
                         <outlet property="answerTwo" destination="AgD-Ns-NrL" id="QMS-0g-z5C"/>
+                        <outlet property="moneyRaining" destination="Hzo-7K-Qft" id="kni-L2-H2O"/>
                         <outlet property="question" destination="cor-3U-hqz" id="nsV-Hi-oX9"/>
                         <outlet property="scoreLabel" destination="rbv-Jg-n8x" id="7fR-R2-BO3"/>
                     </connections>
@@ -341,5 +346,6 @@
     </scenes>
     <resources>
         <image name="RegisPhilman.png" width="1040" height="1390"/>
+        <image name="makeItRain.gif" width="718" height="404"/>
     </resources>
 </document>

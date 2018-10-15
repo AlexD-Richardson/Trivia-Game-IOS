@@ -24,6 +24,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var answerFour: UIButton!
     
+    @IBOutlet weak var moneyRaining: UIImageView!
+    
+    
     var arrayChooser: Int!
     
     var score = 0 {
@@ -35,6 +38,12 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    var colorArray = [UIColor.red, .blue, .green, .yellow, .orange, .magenta, .purple]
+    
+    var time = Timer()
+    
+    var gifTime = Timer()
     
     var randomIndex : Int!
     
@@ -78,6 +87,10 @@ class ViewController: UIViewController {
     
     func resetGame() {
         
+        time.invalidate()
+        
+        self.view.backgroundColor = .white
+        
         score = 0
         
         if !questions.isEmpty {
@@ -114,7 +127,18 @@ class ViewController: UIViewController {
             randomIndex = Int(arc4random_uniform(UInt32(questions.count)))
             
             currentQuestion = questions[randomIndex]
+            
         } else if questions.count == 0 {
+            
+            moneyRaining.isHidden = false
+            
+            time = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(winnerBackground), userInfo: nil, repeats: true)
+            
+            gifTime = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(moneyDissapear), userInfo: nil, repeats: false)
+            
+            moneyRaining.image = UIImage.gifImageWithName("makeItRain")
+            
+            gifTime.fireDate = Date().addingTimeInterval(6)
             
             showWinnerAlert()
             
@@ -142,7 +166,7 @@ class ViewController: UIViewController {
         self.present(correctAlert,animated: true, completion: nil)
     }
     
-    func showWinnerAlert() {
+    @objc func showWinnerAlert() {
         
         let winnerAlert = UIAlertController(title: "WINNER!", message: "You are a Millonaire!!!", preferredStyle: .alert)
         
@@ -151,6 +175,7 @@ class ViewController: UIViewController {
         }
         
         winnerAlert.addAction(resetAction)
+        
         
         self.present(winnerAlert, animated: true, completion: nil)
         
@@ -171,5 +196,13 @@ class ViewController: UIViewController {
         }
     }
     
+    @objc func moneyDissapear() {
+        moneyRaining.isHidden = true
+    }
     
+    @objc func winnerBackground() {
+            let randomColor = colorArray[Int(arc4random_uniform(UInt32(colorArray.count)))]
+            self.view.backgroundColor = randomColor
+        }
+
 }
