@@ -200,6 +200,8 @@ class ViewController: UIViewController {
         moneyRaining.isHidden = true
     }
     
+    
+    //changes background
     @objc func winnerBackground() {
             let randomColor = colorArray[Int(arc4random_uniform(UInt32(colorArray.count)))]
             self.view.backgroundColor = randomColor
